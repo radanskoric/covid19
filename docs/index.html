@@ -1,40 +1,51 @@
 <!doctype html>
 <html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161623914-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161623914-1');
+  </script>
+
   <title>Covid-19 spread visualisation</title>
   <meta charset="UTF-8">
   <meta name="description" content="An interactive visualisation of spread of Covid-19 pandemic through time based on Johns Hopkins University Center for Systems Science and Engineering data.">
   <meta name="keywords" content="Covid-19,coronavirus,pandemic">
   <meta name="author" content="Radan Skorić">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-    <style>
-        .container {
-          display: flex;
-        }
 
-        #sidebar {
-            width: 18%;
-            flex-grow: 1;
-            flex-flow: column;
-            padding: 10px;
-        }
+  <style>
+      .container {
+        display: flex;
+      }
 
-        #map {
-          flex-grow: 4;
-          background-color: black;
-          width: 80%;
-          float: right;
-        }
+      #sidebar {
+          width: 18%;
+          flex-grow: 1;
+          flex-flow: column;
+          padding: 10px;
+      }
 
-        #slider {
-          width: 100%;
-        }
+      #map {
+        flex-grow: 4;
+        background-color: black;
+        width: 80%;
+        float: right;
+      }
 
-        #about {
-          font-size: 90%;
-        }
-    </style>
-    <script src="app.bundle.js"></script>
+      #slider {
+        width: 100%;
+      }
+
+      #about {
+        font-size: 90%;
+      }
+  </style>
+  <script src="app.bundle.js"></script>
 <body>
   <div id="date-selector" class="container"></div>
   <div class="container">
