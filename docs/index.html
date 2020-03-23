@@ -23,18 +23,23 @@
         display: flex;
       }
 
+      #main {
+        flex-flow: row wrap;
+      }
+
       #sidebar {
-          width: 18%;
-          flex-grow: 1;
-          flex-flow: column;
-          padding: 10px;
+          flex: 1;
+          flex-flow: column nowrap;
       }
 
       #map {
-        flex-grow: 4;
+        flex: 4;
         background-color: black;
-        width: 80%;
-        float: right;
+      }
+
+      #date-selector {
+        flex: 0 0 100%;
+        padding: 10px 0;
       }
 
       #slider {
@@ -45,28 +50,33 @@
         font-size: 90%;
       }
 
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 800px) {
         #main {
-          flex-flow: column-reverse;
+          flex-flow: column;
         }
 
         #sidebar {
             width: 100%;
+            order: 3;
         }
 
         #map {
           width: 100%;
-          float: none;
+          order: 1;
+        }
+
+        #date-selector {
+          order: 2;
         }
       }
   </style>
   <script src="app.bundle.js"></script>
 <body>
-  <div id="date-selector" class="container"></div>
   <div id="main" class="container">
-    <div id="sidebar">
-      <div id="info" class="sidebar"></div>
-      <div id="about" class="sidebar">
+    <div id="date-selector" class="container"></div>
+    <div id="sidebar" class="container">
+      <div id="info"></div>
+      <div id="about">
         <p>
           The size of the circle represents the number of active cases in a location. Radius is a logarithm (base 2) of the number of cases.
           The color represents new confirmed cases on that day: Green = 0, Yellow = 50, Red = 500+.
