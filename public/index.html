@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <title>Covid-19 spread visualisation</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="An interactive visualisation of spread of Covid-19 pandemic through time based on Johns Hopkins University Center for Systems Science and Engineering data.">
+  <meta name="keywords" content="Covid-19,coronavirus,pandemic">
+  <meta name="author" content="Radan Skorić">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <style>
+        .container {
+          display: flex;
+        }
+
+        #info {
+            display: flex;
+            width: 18%;
+            flex-grow: 1;
+            flex-flow: column;
+            padding: 10px;
+        }
+
+        #map {
+          display: flex;
+          flex-grow: 4;
+          background-color: black;
+          width: 80%;
+          float: right;
+        }
+
+        #slider {
+          width: 100%;
+        }
+    </style>
+    <script src="app.bundle.js"></script>
+<body>
+  <div id="date-selector" class="container"></div>
+  <div class="container">
+    <div id="info"></div>
+    <div id="map"></div>
+  </div>
+</body>
+</html>
