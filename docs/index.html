@@ -44,11 +44,26 @@
       #about {
         font-size: 90%;
       }
+
+      @media only screen and (max-width: 600px) {
+        #main {
+          flex-flow: column-reverse;
+        }
+
+        #sidebar {
+            width: 100%;
+        }
+
+        #map {
+          width: 100%;
+          float: none;
+        }
+      }
   </style>
   <script src="app.bundle.js"></script>
 <body>
   <div id="date-selector" class="container"></div>
-  <div class="container">
+  <div id="main" class="container">
     <div id="sidebar">
       <div id="info" class="sidebar"></div>
       <div id="about" class="sidebar">
