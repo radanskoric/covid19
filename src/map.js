@@ -29,10 +29,15 @@ export default class {
   }
 
   initLocations(locationsData) {
-    this.map.bubbles(locationsData)
+    this.map.bubbles(locationsData, {
+      popupTemplate: (data) => {
+        return `<div class="hoverinfo"><strong>${data.name} (active: ${data[this.currentDate].active})</strong></div>`
+      }
+    })
   }
 
   update(date) {
+    this.currentDate = date
     select(this.dom).selectAll('circle.datamaps-bubble')
        .transition()
        .duration(100)
