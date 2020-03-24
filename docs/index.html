@@ -33,13 +33,15 @@
       }
 
       #map {
-        flex: 4;
+        flex: 3;
         background-color: black;
       }
 
       #date-selector {
-        flex: 0 0 100%;
-        padding: 10px 0;
+        border: 1px solid rgb(50, 150, 50);
+        border-radius: 5px;
+        margin: 5px;
+        background-color: rgb(200, 255, 200);
       }
 
       #slider {
@@ -50,7 +52,7 @@
         font-size: 90%;
       }
 
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 1000px) {
         #main {
           flex-flow: column;
         }
@@ -64,17 +66,13 @@
           width: 100%;
           order: 1;
         }
-
-        #date-selector {
-          order: 2;
-        }
       }
   </style>
   <script src="app.bundle.js?v2"></script>
 <body>
   <div id="main" class="container">
-    <div id="date-selector" class="container"></div>
     <div id="sidebar" class="container">
+      <div id="date-selector" class="container"></div>
       <div id="info"></div>
       <div id="about">
         <p>
