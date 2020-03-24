@@ -22,7 +22,16 @@ describe(Data, () => {
         "3/17/20": "67799",
         "3/18/20": "67800"
       },
-      length: 2
+      2: {
+        "Province/State": "",
+        "Country/Region": "Test no growth",
+        "Lat": "40",
+        "Long": "40",
+        "3/16/20": "100",
+        "3/17/20": "200",
+        "3/18/20": "200"
+      },
+      length: 3
     },
     deaths: {
       columns: ["Province/State", "Country/Region", "Lat", "Long", "3/16/20", "3/17/20", "3/18/20"],
@@ -44,7 +53,16 @@ describe(Data, () => {
         "3/17/20": "3111",
         "3/18/20": "3122"
       },
-      length: 2
+      2: {
+        "Province/State": "",
+        "Country/Region": "Test no growth",
+        "Lat": "40",
+        "Long": "40",
+        "3/16/20": "0",
+        "3/17/20": "0",
+        "3/18/20": "0"
+      },
+      length: 3
     },
     recovered: {
       columns: ["Province/State", "Country/Region", "Lat", "Long", "3/16/20", "3/17/20", "3/18/20"],
@@ -66,7 +84,16 @@ describe(Data, () => {
         "3/17/20": "56003",
         "3/18/20": "56927"
       },
-      length: 2
+      2: {
+        "Province/State": "",
+        "Country/Region": "Test no growth",
+        "Lat": "40",
+        "Long": "40",
+        "3/16/20": "0",
+        "3/17/20": "0",
+        "3/18/20": "0"
+      },
+      length: 3
     }
   }
 
@@ -84,6 +111,7 @@ describe(Data, () => {
     expect(data.locations).toEqual([
       {name: "Croatia", latitude: 45.1, longitude: 15.2, "3/16/20": {active: 55, delta: 0}, "3/17/20": {active: 61, delta: 8}, "3/18/20": {active: 76, delta: 16}},
       {name: "China/Hubei", latitude: 30.9756, longitude: 112.2707, "3/16/20": {active: 9557, delta: 0}, "3/17/20": {active: 8685, delta: 1}, "3/18/20": {active: 7751, delta: 1}},
+      {name: "Test no growth", latitude: 40, longitude: 40, "3/16/20": {active: 100, delta: 0}, "3/17/20": {active: 200, delta: 100}, "3/18/20": {active: 200, delta: 100}},
     ])
   })
 })

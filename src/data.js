@@ -15,12 +15,14 @@ export default class {
       }
 
       let previous = null
+      let previousDelta = 0
       each(this.dates, (date) => {
         let active = parseInt(location[date])
         let delta = previous ? active - previous : 0
         previous = active
 
-        locationData[date] = {active: active, delta: delta}
+        locationData[date] = {active: active, delta: (delta != 0) ? delta : previousDelta}
+        previousDelta = delta
       })
 
       locationsMap[locationData.name] = locationData
