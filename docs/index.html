@@ -74,9 +74,27 @@
     <div id="sidebar" class="container">
       <div id="date-selector" class="container"></div>
       <div id="info"></div>
+      <div id="legend">
+        <div>
+          Circle size
+          <svg height="1.6em" width="1.6em">
+            <circle cx="0.8em" cy="0.8em" r="0.7em" stroke="black" stroke-width="1" fill="gray" />
+          </svg>
+          = number of <b>active</b> cases
+        </div>
+
+        <div>
+          Circle colour = daily growth(
+          <span style="color:#00FF00">0</span>,
+          <span style="color:#FFFF00">50</span>,
+          <span style="color:#FFAA00">200</span>,
+          <span style="color:#FF0000">500+</span>
+          new)
+        </div>
+      </div>
       <div id="about">
         <p>
-          The size of the circle represents the number of active cases in a location. Radius is a logarithm (base 2) of the number of cases.
+          This is an interactive visualisation of the spread of Covid-19 pandemic. The size of the circle represents the number of active cases in a location. Radius is a logarithm (base 2) of the number of cases.
           The color represents new confirmed cases on that day: Green = 0, Yellow = 50, Red = 500+.
         </p>
         <p>

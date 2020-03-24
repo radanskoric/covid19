@@ -1,9 +1,9 @@
 export default class {
   constructor(dom) {
     dom.innerHTML = `
-      <p>
+      <div>
         ⇑Use the slider to change the date ⇑
-      </p>
+      </div>
       <h2 id="current-date"></h2>
     `
 
