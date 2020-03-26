@@ -46,9 +46,13 @@ export default class {
     each(locations, (location) => {
       let locationData = locationsMap[this._locationName(location)]
 
-      each(this.dates, (date) => {
-        locationData[date].active = locationData[date].active - parseInt(location[date])
-      })
+      if(locationData) {
+        let lastKnownValue = 0
+        each(this.dates, (date) => {
+          if(location[date]) { lastKnownValue = parseInt(location[date]) }
+          locationData[date].active = locationData[date].active - lastKnownValue
+        })
+      }
     })
   }
 }
