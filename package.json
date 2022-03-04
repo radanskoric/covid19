@@ -17,24 +17,24 @@
   "author": "Radan Skorić",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "jasmine-ajax": "^4.0.0",
-    "jasmine-core": "^3.5.0",
-    "karma": "^6.3.14",
+    "jasmine-core": "^3.99.1",
+    "karma": "^6.3.17",
     "karma-chrome-launcher": "^3.1.0",
-    "karma-jasmine": "^3.1.1",
+    "karma-jasmine": "^3.3.1",
     "karma-webpack": "^4.0.2",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2",
-    "minimist": ">=1.2.3"
+    "minimist": ">=1.2.3",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "d3": "^5.15.0",
+    "d3": "^5.16.0",
     "datamaps": "^0.5.9",
     "lodash": "^4.17.21"
   }
